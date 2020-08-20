@@ -1,0 +1,43 @@
+import os
+import webbrowser
+
+
+
+print("================================Welcome==============================")
+print("'===>    This Program allows you to run system applications   <=== ' ")
+print("|-> Here's the list of the programs that are executed by this program")
+print(
+      "|->Microsoft edge" '\n'
+      "|->Notepad " '\n'
+      "|->Date & Time" '\n'
+      "|->Open any website" '\n')
+while True:
+    
+   print("please Enter your program to run here ==>", end='')
+   myinput = input()
+   if(("run" in myinput) or ("execute" in myinput)or("start" in myinput)) and (('edge' in myinput) or ('webbrowser'in myinput)or ('microsoft edge'in myinput)):
+    print("                      Loading...                                 ")
+    print("                Currently opening web-browser                     ")
+    os.system("microsoftedge")
+   elif(("restart"in myinput)or ("recompile"in myinput)or('execute' in myinput)and ('this program 'in myinput)or('program'in myinput)or('current program' in myinput)):
+    print(" ==> please wait your program is interpreting again   <===")
+    print(" ==>      Here's your restarted programs output       <===")
+    os.system("python temp.py ")
+   elif(("open" in myinput) and ('this'in myinput) or ('link' in myinput)):
+    print("Opening your website please hold on a second")
+    link = input()
+    webbrowser.open(link)
+   elif(("tell" in myinput)or("what" in myinput) and ('date' in myinput)):
+    os.system("date")
+   elif(("whats" in myinput)or("tell" in myinput)and ('time' in myinput)):
+    os.system('time')
+   elif(("open"in myinput)or("execute"in myinput)and ('wordeditor'in myinput)or('notepad'in myinput)):
+    print("Opening",myinput,"for you..")
+    os.system("notepad")
+   elif(('quit'in myinput)or("exit" in myinput)and ('program'in myinput)):
+    os.system(exit)
+    break
+          
+   else:
+       print("Enter Your Command again please...")
+
